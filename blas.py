@@ -11,6 +11,7 @@ tone = PDTone()
 
 # Store all the tunes here, as lists with format (note, duration)
 tunes = {
+  'Tune 0': [('a',0.5),('a',0.5),('b',0.5),('c',0.5)],
   'Tune 1': [('a',1),('a#',0.5),('d',1)],
   'Tune 2': [('c',0.5),('d',0.5),('e',0.5)],
   'Tune 3': [('a',0.5),('a#',0.5),('b',0.5),('c',0.5)]
@@ -170,6 +171,10 @@ while 1:
     current_tune_idx += 1
     if current_tune_idx >= len(tunes):
       current_tune_idx = 0
+      print("You've made it!")
+      print("Press the left button to continue...")
+      while GPIO.input(pins[0]):
+        pass
   else:
     print("What have you done!?")
     
