@@ -68,7 +68,6 @@ class PDTone():
     time.sleep(duration)
     self.power_off()
 
-
   def create_pd_file(self):
     print("Populating temp PD file: " + self.pd_file)
     f = open(self.pd_file, 'w')
