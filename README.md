@@ -4,10 +4,17 @@ A re-imagining of the classic Simon game, challenging you to remember and repeat
 
 ## Requirements
 
-You'll need pd installed, that's what we use to create lovely tones to accompany your lights. You should also plug in a pair of headphones or speakers.
+You'll need `pd` installed, that's what we use to create lovely tones to accompany your lights. You should also plug in a pair of headphones or speakers.
 
 ```bash
 sudo apt-get install pd
+```
+
+To download the Python files, run the following commands:
+
+```bash
+wget http://goo.gl/4Bf0MJ -O babbage.zip
+unzip babbage.zip
 ```
 
 ## Giving it a go!
@@ -19,6 +26,7 @@ Get it wrong and you lose a life, get it right and you progress to the next tune
 Are you a musical ninja, or a tone-deaf sea-dog, give it a try and find out!
 
 ```bash
+cd babbage-lights-n-sounds-master
 sudo python blas.py
 ```
 
@@ -26,7 +34,7 @@ sudo python blas.py
 
 We've tried to comment everything so you can make changes. You'll probably want to start with changing the list of tunes.
 
-A tune is a list of tuples containing the musical note ( from the notes list ) and the duration ( in seconds ). Here's an example:
+A tune is a list of tuples containing the musical note (from the notes list) and the duration (in seconds). Here's an example:
 
 ```python
 [('a',0.5),('a',0.5),('b',0.5),('c',0.5)]
